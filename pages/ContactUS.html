@@ -1,13 +1,7 @@
 <!DOCTYPE html>
-<!--
-Template Name: Nonuxor
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
+
 <html>
-<head>
+<head> 
 <title>SmartICT | Contact Us </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -60,15 +54,13 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="content"> 
       <!-- ################################################################################################ -->
      
- 
-      <div class="scrollable">
-        
-      </div>
+
       <div id="comments">
- 
+
        
-        <h2>Leave us a Message</h2>
-        <form action="mailto:nader.samir@uni.lu" method="post">
+      <!--  Send Email with content of form to myself
+      <h2>Leave us a Message</h2>
+        <form method="POST" action="http://formspree.io/nader.nsamir@gmail.com">
           <div class="one_third first">
             <label for="name">Name <span>*</span></label>
             <input type="text" name="name" id="name" value="" size="22" required>
@@ -81,12 +73,47 @@ Licence URI: http://www.os-templates.com/template-terms
           <div class="block clear">
             <label for="comment">Your Message</label>
             <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+            <input type="text" name="_gotcha" style="display:none" />
           </div>
-          <div>
-            <input type="submit" name="submit" value="Submit">
-            
+          <div> 
+            <button type="submit">Submit</button>
           </div>
-        </form>
+        </form> -->
+     
+
+
+              <script src="layout/scripts/js/jquery.min.js"></script>
+                <script type="text/javascript">var submitted=false;</script>
+                <script type="text/javascript">
+                  $('#gform').on('submit', function(e) {
+                  $('#gform *').fadeOut(2000);
+                  $('#gform').prepend('Your submission is being processed...');
+                  });
+              </script>
+
+        <!-- Fills our a google form-->
+          <h2>Leave us a Message</h2>
+            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfjZQo_JLyaCE4nHaREX20YvY9Hv2jivXjoaEhnkx1RLXouLg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+        <!-- First name:<br>-->
+            <div class="one_third first">
+              <label for="name">Name <span>*</span></label>
+              <input type="text" name="entry.1662876046" id="entry.1662876046" value="" size="22" required>
+            </div>
+            <div class="one_third">
+        <!--Last name:<br>-->
+              <label for="email">E-mail <span>*</span></label>
+              <input type="email" name="entry.1569658140" id="entry.1569658140" value="" size="22" required>
+           </div>
+            <div class="block clear">
+              <label for="comment">Your Message <span>*</span></label>
+              <textarea name="entry.45291006" id="entry.45291006" cols="25" rows="15"></textarea>
+              <input type="submit" value="Submit">
+            </div>
+
+            </form>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
       </div>
       <!-- ################################################################################################ -->
     </div>
@@ -139,5 +166,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+
+ 
+
 </body>
 </html>
