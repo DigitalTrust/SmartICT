@@ -88,14 +88,14 @@
           <h2>Leave us a Message</h2>
 
 
-              <script src="layout/scripts/jquery.min.js"></script>
+               <script src="layout/scripts/jquery.min.js"></script>
                 <script type="text/javascript">var submitted=false;</script>
                 <script type="text/javascript">
                   $('#gform').on('submit', function(e) {
                   $('#gform *').fadeOut(2000);
                   $('#gform').prepend('Your submission is being processed...');
                   });
-              </script>
+               </script>
 
 
             <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfjZQo_JLyaCE4nHaREX20YvY9Hv2jivXjoaEhnkx1RLXouLg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
@@ -114,7 +114,16 @@
             <div class="block clear">
               <label for="comment">Your Message <span>*</span></label>
               <textarea name="entry.45291006" id="entry.45291006" cols="25" rows="15"></textarea>
-              
+  
+
+              <script src="layout/scripts/jquery.min.js"></script>
+                <script type="text/javascript">var submitted=false;</script>
+                <script type="text/javascript">
+                  $('#gform').on('submit', function(e) {
+                  $('#gform *').fadeOut(2000);
+                  $('#gform').prepend('Your submission is being processed...');
+                  });
+               </script>
 
 
               <input type="submit" value="Submit">
